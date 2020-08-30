@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class AvoidInteraction : InteractionBehaviour
 {
-    public string avoidTag;
-
     public override void Start()
     {
         base.Start();
@@ -15,7 +13,7 @@ public class AvoidInteraction : InteractionBehaviour
 
     public void HarmInteraction(Collider2D col)
     {
-        if (col.CompareTag(avoidTag))
+        if (col.CompareTag(targetTag))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

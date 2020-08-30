@@ -6,6 +6,8 @@ public class ThrowableEntity : Entity
 {
     public Vector3 direction = Vector3.up;
     public bool interacted = false;
+    public delegate void OnHit();
+    public OnHit ontargetHit = delegate { };
 
     public override void Move()
     {

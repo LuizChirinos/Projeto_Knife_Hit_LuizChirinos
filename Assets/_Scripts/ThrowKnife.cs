@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +8,20 @@ public class ThrowKnife : MonoBehaviour
     public ThrowableEntity[] knifesStorage;
     public int indexKnife;
     public ThrowableEntity currentKnife;
+
     public delegate void OnThrowKnife();
     public OnThrowKnife onThrow = delegate { };
+    
     [SerializeField]
     private bool hasInteracted = false;
+    private int knifesLeft;
 
     private void Start()
     {
         onThrow += IncrementKnife;
         knifesStorage = GetComponentsInChildren<ThrowableEntity>();
+        knifesLeft = knifesStorage.Length;
+
         for (int i = 1; i < knifesStorage.Length; i++)
         {
             knifesStorage[i].gameObject.SetActive(false);
@@ -38,6 +44,9 @@ public class ThrowKnife : MonoBehaviour
 
     public void IncrementKnife()
     {
+        knifesLeft--;
+        knifesLeft = Mathf.Clamp(knifesLeft, 0, knifesStorage.Length);
+
         if (indexKnife < knifesStorage.Length-1)
             indexKnife++;
         else
@@ -45,5 +54,10 @@ public class ThrowKnife : MonoBehaviour
 
         currentKnife = knifesStorage[indexKnife];
         currentKnife.gameObject.SetActive(true);
+    }
+
+    public int GetKnifesLeft()
+    {
+        return knifesLeft;
     }
 }

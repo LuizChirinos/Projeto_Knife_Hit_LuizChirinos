@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 4164690850293887097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4164690849315411100}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 264a5a00c60abf341a8e716f1132747f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 679b271b07d3c44f6b6a859d3e88cb4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -161,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17914677}
+  m_Offset: {x: 0, y: -0.14696217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -172,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 1.1417065}
+  m_Size: {x: 0.25, y: 1.0773373}
   m_EdgeRadius: 0
 --- !u!50 &4164690851056010403
 Rigidbody2D:
@@ -194,7 +194,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!114 &4164690851056010400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   repeatInteraction: 0
   hasInteracted: 0
   disableMovement: 1
+  targetTag: Enemy
 --- !u!114 &113302536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,4 +241,4 @@ MonoBehaviour:
   repeatInteraction: 0
   hasInteracted: 0
   disableMovement: 1
-  avoidTag: Knife
+  targetTag: Knife

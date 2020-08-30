@@ -22,6 +22,6 @@ public class Entity : MonoBehaviour
     public void ToggleKinematic(bool activation)
     {
         rb.isKinematic = activation;
-        Debug.Log(rb.isKinematic);
+        //Debug.Log(rb.isKinematic);
     }
 }

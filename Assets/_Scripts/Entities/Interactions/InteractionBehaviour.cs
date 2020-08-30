@@ -15,6 +15,8 @@ public class InteractionBehaviour : MonoBehaviour
 
     private Entity entity;
 
+    public string targetTag;
+
     public virtual void Start()
     {
         hasInteracted = false;
@@ -24,7 +26,8 @@ public class InteractionBehaviour : MonoBehaviour
     {
         if (!hasInteracted)
         {
-            hasInteracted = true;
+            if (!repeatInteraction)
+                hasInteracted = true;
 
             interactionEvent(col);
 
@@ -38,12 +41,18 @@ public class InteractionBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Interact(collision.collider);
-        //Debug.Log(gameObject.name + " interacted with " + collision.transform.name);
+        if (collision.gameObject.CompareTag(targetTag))
+        {
+            Interact(collision.collider);
+            //Debug.Log(gameObject.name + " interacted with " + collision.transform.name);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Interact(other);
-        Debug.Log(gameObject.name + " interacted with " + other.name);
+        if (other.CompareTag(targetTag))
+        {
+            Interact(other);
+            Debug.Log(gameObject.name + " interacted with " + other.name);
+        }
     }
 }
