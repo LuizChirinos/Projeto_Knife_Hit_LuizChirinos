@@ -12,6 +12,10 @@ public class UIManager : MonoBehaviour
     public Text textStage;
     public Text textMoney;
 
+    public Text textMaxScore;
+    public Text textMaxStage;
+
+
     void Start()
     {
         stageController = GameObject.Find("Manager").GetComponent<StageController>();
@@ -34,5 +38,8 @@ public class UIManager : MonoBehaviour
         textScore.text = "Score\n" + ScoreController.score.ToString();
         textStage.text = "Stage\n" + stageController.currentStage.ToString();
         textMoney.text = MoneyController.money.ToString();
+
+        textMaxScore.text = "MaxScore\n" + ScoreController.maxScore.ToString();
+        textMaxStage.text = "Stage\n" + StageController.maxStage.ToString();
     }
 }

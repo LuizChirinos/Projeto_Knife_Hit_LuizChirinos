@@ -6,6 +6,8 @@ public class GameStart : MonoBehaviour
 {
     private GameObject managerGO;
     private ThrowKnife throwKnife;
+    private UIManager uimanager;
+
     private StageController stageController;
 
     private GameObject enemiesParent;
@@ -17,6 +19,7 @@ public class GameStart : MonoBehaviour
         managerGO = GameObject.Find("Manager");
         throwKnife = managerGO.GetComponent<ThrowKnife>();
         stageController = managerGO.GetComponent<StageController>();
+        uimanager = managerGO.GetComponent<UIManager>();
         enemies = enemiesParent.GetComponentsInChildren<Entity>();
 
         stageController.onStageCompleted += RestartGame;
@@ -28,6 +31,9 @@ public class GameStart : MonoBehaviour
     {
         throwKnife.SetKnifePosition(0, throwKnife.knifeStartPosition.position);
         stageController.ReleaseFirstStage();
+        ScoreController.SetScore(0);
+
+        uimanager.UpdateUI();
         Invoke("ReleaseGameStatus", 1f);
     }
 

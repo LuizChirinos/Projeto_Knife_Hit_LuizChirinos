@@ -21,9 +21,9 @@ public class CountHitsInteraction : InteractionBehaviour
         ThrowableEntity throwable = col.GetComponent<ThrowableEntity>();
 
         if (!isMoney)
-            ScoreController.score += pointsAmount;
+            ScoreController.ModifyScore(pointsAmount);
         else
-            MoneyController.money += (pointsAmount * 10);
+            MoneyController.ModifyMoney(pointsAmount * 10);
 
         amountOfHits++;
 

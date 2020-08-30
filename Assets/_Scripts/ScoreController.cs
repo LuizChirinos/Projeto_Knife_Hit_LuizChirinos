@@ -6,6 +6,7 @@ using UnityEngine;
 public static class ScoreController
 {
     public static int score = 0;
+    public static int maxScore = 0;
 
     public static void SetScore(int value)
     {
@@ -14,5 +15,7 @@ public static class ScoreController
     public static void ModifyScore(int amount)
     {
         score += amount;
+        if (score > maxScore)
+            maxScore = score;
     }
 }

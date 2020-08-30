@@ -232,9 +232,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1117537118}
+  - {fileID: 872096119}
   - {fileID: 719878799}
   - {fileID: 1642677764}
-  - {fileID: 872096119}
   m_Father: {fileID: 262260959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 719878800}
   - component: {fileID: 719878802}
   m_Layer: 5
-  m_Name: Text Score Menu
+  m_Name: Text Max Score Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,12 +1013,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 196868865}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -311, y: 69}
-  m_SizeDelta: {x: 464, y: 190.19995}
+  m_AnchoredPosition: {x: -240, y: 77}
+  m_SizeDelta: {x: 269.1, y: 253.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719878800
 MonoBehaviour:
@@ -1044,14 +1044,16 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 100
+    m_MaxSize: 60
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 'MaxScore
+
+    0'
 --- !u!222 &719878801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1367,7 +1369,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 196868865}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2369,6 +2371,17 @@ MonoBehaviour:
           m_StringArgument: Menu_background_appearing
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1967590519}
+        m_MethodName: ReturnMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1479174875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,7 +2690,7 @@ GameObject:
   - component: {fileID: 1642677765}
   - component: {fileID: 1642677767}
   m_Layer: 5
-  m_Name: Text Stage Menu
+  m_Name: Text Max Stage Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2695,12 +2708,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 196868865}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311, y: 69}
-  m_SizeDelta: {x: 464, y: 190.19995}
+  m_AnchoredPosition: {x: 240, y: 77}
+  m_SizeDelta: {x: 269.1, y: 253.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642677765
 MonoBehaviour:
@@ -2726,14 +2739,16 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 100
+    m_MaxSize: 60
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage
+  m_Text: 'Stage
+
+    1'
 --- !u!222 &1642677766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3212,6 +3227,8 @@ MonoBehaviour:
   textScore: {fileID: 1396625718}
   textStage: {fileID: 366247408}
   textMoney: {fileID: 1712217443}
+  textMaxScore: {fileID: 719878800}
+  textMaxStage: {fileID: 1642677765}
 --- !u!114 &1967590518
 MonoBehaviour:
   m_ObjectHideFlags: 0
