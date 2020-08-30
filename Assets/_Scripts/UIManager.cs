@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     private ThrowKnife throwKnife;
+    private StageController stageController;
     public Slider knifesBar;
     public Text textScore;
+    public Text textStage;
+    public Text textMoney;
 
     void Start()
     {
+        stageController = GameObject.Find("Manager").GetComponent<StageController>();
         throwKnife = GetComponent<ThrowKnife>();
         throwKnife.onThrow += UpdateUI;
 
@@ -27,6 +31,8 @@ public class UIManager : MonoBehaviour
         int knifeLeft = throwKnife.GetKnifesLeft();
         knifesBar.value = knifeLeft;
 
-        textScore.text = ScoreController.score.ToString();
+        textScore.text = "Score\n" + ScoreController.score.ToString();
+        textStage.text = "Stage\n" + stageController.currentStage.ToString();
+        textMoney.text = MoneyController.money.ToString();
     }
 }

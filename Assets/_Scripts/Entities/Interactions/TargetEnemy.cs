@@ -2,23 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PointGiverInteraction))]
+[RequireComponent(typeof(CountHitsInteraction))]
 public class TargetEnemy : MonoBehaviour
 {
-    private PointGiverInteraction pointGiverInteraction;
-    public ThrowKnife throwKnife;
+    private CountHitsInteraction pointGiverInteraction;
+    private ThrowKnife throwKnife;
+    private GameObject managerGO;
+    private StageController stageController;
 
     private void Start()
     {
-        pointGiverInteraction = GetComponent<PointGiverInteraction>();
+        pointGiverInteraction = GetComponent<CountHitsInteraction>();
         pointGiverInteraction.interactionEvent += CheckHits;
+        managerGO = GameObject.Find("Manager");
+        throwKnife = managerGO.GetComponent<ThrowKnife>();
+        stageController = managerGO.GetComponent<StageController>();
     }
 
     public void CheckHits(Collider2D col)
     {
         if (pointGiverInteraction.amountOfHits >= throwKnife.knifesStorage.Length-1)
         {
-            Debug.Log("YOU WIN DUDE!");
+            stageController.IncrementStage();
+            Debug.Log("Current Stage " + stageController.currentStage);
+            //Mudar implementação de Die()
+            Die();
         }
+    }
+
+    public virtual void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
