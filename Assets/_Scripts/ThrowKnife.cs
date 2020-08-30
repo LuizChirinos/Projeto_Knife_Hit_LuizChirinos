@@ -31,13 +31,16 @@ public class ThrowKnife : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (GameStatus.gameActive)
         {
-            if (indexKnife < knifesStorage.Length)
+            if (Input.GetMouseButtonDown(0))
             {
-                hasInteracted = true;
-                currentKnife.Move();
-                onThrow();
+                if (indexKnife < knifesStorage.Length)
+                {
+                    hasInteracted = true;
+                    currentKnife.Move();
+                    onThrow();
+                }
             }
         }
     }

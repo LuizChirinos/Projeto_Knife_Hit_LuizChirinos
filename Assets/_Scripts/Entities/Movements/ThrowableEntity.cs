@@ -11,10 +11,10 @@ public class ThrowableEntity : Entity
 
     public override void Move()
     {
+        base.Move();
+
         if (!interacted)
         {
-            base.Move();
-
             interacted = true;
             rb.velocity = direction.normalized * speed;
         }

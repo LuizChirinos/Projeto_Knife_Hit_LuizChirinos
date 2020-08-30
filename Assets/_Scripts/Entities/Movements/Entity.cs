@@ -20,6 +20,8 @@ public class Entity : MonoBehaviour
 
     public virtual void Move()
     {
+        Debug.Log(GameStatus.gameActive);
+
         //Debug.Log(gameObject.name + " is moving!");
     }
 
