@@ -8,6 +8,13 @@ public class ThrowableEntity : Entity
     public bool interacted = false;
     public delegate void OnHit();
     public OnHit ontargetHit = delegate { };
+    private GameObject managerGO;
+
+    public override void Start()
+    {
+        base.Start();
+        managerGO = GameObject.Find("Manager");
+    }
 
     public override void Move()
     {
@@ -22,5 +29,18 @@ public class ThrowableEntity : Entity
         {
             Debug.Log(gameObject.name + " has already been thrown");
         }
+    }
+
+    public void RestartInteraction()
+    {
+        gameObject.layer = 9;
+
+        StickyInteraction sticky = GetComponent<StickyInteraction>();
+        sticky.hasInteracted = false;
+
+        interacted = false;
+        ToggleKinematic(false);
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        transform.parent = managerGO.transform;
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 267106528}
   - component: {fileID: 267106529}
   m_Layer: 8
-  m_Name: Enemy Parent 2
+  m_Name: Enemy Parent 3
   m_TagString: Enemy
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -87,11 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0947a442d2bb0bb40b4aa50da0739331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 0.5
+  defaultSpeed: 2
   speedVariation: 2
   timerSpeed: 0
   timeToChange: 4
-  changeSpeed: 0
+  changeSpeed: 1
 --- !u!114 &267106528
 MonoBehaviour:
   m_ObjectHideFlags: 0

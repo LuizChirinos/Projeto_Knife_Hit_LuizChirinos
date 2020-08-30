@@ -9,6 +9,10 @@ public class ThrowKnife : MonoBehaviour
     public int indexKnife;
     public ThrowableEntity currentKnife;
 
+    public Transform knifeStartPosition;
+    public Transform knifeMenuPosition;
+
+
     public delegate void OnThrowKnife();
     public OnThrowKnife onThrow = delegate { };
     
@@ -62,5 +66,17 @@ public class ThrowKnife : MonoBehaviour
     public int GetKnifesLeft()
     {
         return knifesLeft;
+    }
+
+    public void SetKnifePosition(int index, Vector3 position)
+    {
+        knifesStorage[index].transform.position = position;
+        knifesStorage[index].RestartInteraction();
+    }
+    public void RestartKnifesThrow()
+    {
+        indexKnife = 0;
+        knifesLeft = knifesStorage.Length;
+        currentKnife = knifesStorage[0];
     }
 }
