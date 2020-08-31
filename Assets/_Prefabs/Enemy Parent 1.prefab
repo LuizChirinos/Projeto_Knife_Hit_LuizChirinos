@@ -1,38 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &3162401796007851951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4453268964995153105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe110f048b6ef44e806f96fd1a8d75e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultSpeed: 1
---- !u!114 &8177278686575686124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4453268964995153105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519e16daa55644d449badf20ee40ea95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatInteraction: 0
-  hasInteracted: 0
-  disableMovement: 0
-  targetTag: Knife
-  pointsAmount: 1
-  amountOfHits: 0
-  isMoney: 1
-  deactivateOnInteraction: 1
 --- !u!1 &5083575645973209919
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0947a442d2bb0bb40b4aa50da0739331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 1
+  defaultSpeed: 0.5
   speedVariation: 2
   timerSpeed: 0
   timeToChange: 4
@@ -156,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c9ae47775c16448812047815b66d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countHitInteraction: {fileID: 0}
+  throwKnife: {fileID: 0}
 --- !u!1 &5083575646834178047
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,12 +306,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d9c03e9c610b44d989d849f364ce8b, type: 3}
---- !u!1 &4453268964995153105 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4246237585023210825, guid: 19d9c03e9c610b44d989d849f364ce8b,
-    type: 3}
-  m_PrefabInstance: {fileID: 513579757421865368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2499860230159823765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2707177617084865037, guid: 19d9c03e9c610b44d989d849f364ce8b,

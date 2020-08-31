@@ -1,71 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7325290217044750079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7724188747697712516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe110f048b6ef44e806f96fd1a8d75e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultSpeed: 1
---- !u!114 &3424618145274052353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7724188747697712516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519e16daa55644d449badf20ee40ea95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatInteraction: 0
-  hasInteracted: 0
-  disableMovement: 0
-  targetTag: Knife
-  pointsAmount: 1
-  amountOfHits: 0
-  isMoney: 1
-  deactivateOnInteraction: 1
---- !u!114 &2436171128715943254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185392855418207720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe110f048b6ef44e806f96fd1a8d75e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultSpeed: 1
---- !u!114 &502218843046913271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185392855418207720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519e16daa55644d449badf20ee40ea95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatInteraction: 0
-  hasInteracted: 0
-  disableMovement: 0
-  targetTag: Knife
-  pointsAmount: 1
-  amountOfHits: 0
-  isMoney: 1
-  deactivateOnInteraction: 1
 --- !u!1 &8710184451061226123
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,12 +15,12 @@ GameObject:
   - component: {fileID: 4498171895422009684}
   - component: {fileID: 4498171895422009685}
   m_Layer: 8
-  m_Name: Enemy Parent 3 1
+  m_Name: Enemy Parent 4
   m_TagString: Enemy
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8710184451061226165
 Transform:
   m_ObjectHideFlags: 0
@@ -190,7 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c9ae47775c16448812047815b66d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointGiverInteraction: {fileID: 0}
+  countHitInteraction: {fileID: 0}
+  throwKnife: {fileID: 0}
 --- !u!1 &8710184451919662667
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,12 +307,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d9c03e9c610b44d989d849f364ce8b, type: 3}
---- !u!1 &7724188747697712516 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4246237585023210825, guid: 19d9c03e9c610b44d989d849f364ce8b,
-    type: 3}
-  m_PrefabInstance: {fileID: 5898728338648725709}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8380545353200739008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2707177617084865037, guid: 19d9c03e9c610b44d989d849f364ce8b,
@@ -453,12 +382,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d9c03e9c610b44d989d849f364ce8b, type: 3}
---- !u!1 &6185392855418207720 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4246237585023210825, guid: 19d9c03e9c610b44d989d849f364ce8b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8015075354622847137}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5380278880662925996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2707177617084865037, guid: 19d9c03e9c610b44d989d849f364ce8b,

@@ -12,6 +12,12 @@ public class StickyInteraction : InteractionBehaviour
 
     private void Stick(Collider2D col)
     {
+        TargetEnemy target = col.GetComponent<TargetEnemy>();
+        if (target.countHitInteraction.amountOfHits < target.throwKnife.knifesStorage.Length-1)
+        {
+        
+            //gameObject.SetActive(false);
+        }
         transform.parent = col.transform;
         transform.gameObject.layer = 8;
     }

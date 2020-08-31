@@ -33,8 +33,8 @@ public class InteractionBehaviour : MonoBehaviour
 
             if (disableMovement)
             {
-                entity.enabled = false;
-                entity.ToggleKinematic(true);
+                //entity.enabled = false;
+                //entity.ToggleKinematic(true);
             }
         }
     }
@@ -52,7 +52,7 @@ public class InteractionBehaviour : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             Interact(other);
-            Debug.Log(gameObject.name + " interacted with " + other.name);
+            //Debug.Log(gameObject.name + " interacted with " + other.name);
         }
     }
 }

@@ -525,29 +525,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -1013,7 +998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &561008142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1114,29 +1099,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -1301,29 +1271,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -1393,6 +1348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Parent 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710184451061226123, guid: 9a64060ccf5bcf04aa793808a656c850,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8710184451061226165, guid: 9a64060ccf5bcf04aa793808a656c850,
         type: 3}
@@ -1476,29 +1436,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -1564,29 +1509,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -2110,29 +2040,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -2388,29 +2303,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -2730,29 +2630,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -2945,7 +2830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1655286464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3024,29 +2909,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
       propertyPath: m_Name
       value: Player Knife (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010413, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -3320,26 +3190,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5083575645973209860, guid: 0a7f9c0d6ec91e043b4b3576cc7eca9a,
-        type: 3}
-      propertyPath: speedVariation
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5083575645973209860, guid: 0a7f9c0d6ec91e043b4b3576cc7eca9a,
-        type: 3}
-      propertyPath: timeToChange
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5083575645973209860, guid: 0a7f9c0d6ec91e043b4b3576cc7eca9a,
-        type: 3}
-      propertyPath: changeSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5083575645973209860, guid: 0a7f9c0d6ec91e043b4b3576cc7eca9a,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5083575645973209919, guid: 0a7f9c0d6ec91e043b4b3576cc7eca9a,
         type: 3}
       propertyPath: m_Name
@@ -3451,8 +3301,6 @@ MonoBehaviour:
   textMoney: {fileID: 1712217443}
   textMaxScore: {fileID: 719878800}
   textMaxStage: {fileID: 1642677765}
-  textCurrentLife: {fileID: 561008143}
-  textKnifesIndex: {fileID: 1655286465}
 --- !u!114 &1967590518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3580,6 +3428,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Parent 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8710184451061226123, guid: 9a64060ccf5bcf04aa793808a656c850,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8710184451061226165, guid: 9a64060ccf5bcf04aa793808a656c850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3644,19 +3497,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967590516}
     m_Modifications:
-    - target: {fileID: 113302536, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
-      propertyPath: targetTag
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690850293887103, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164690851056010400, guid: 4b363842881fd5b41bd50eca95803404,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 10
+    - target: {fileID: 113302535, guid: 4b363842881fd5b41bd50eca95803404, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164690851056010412, guid: 4b363842881fd5b41bd50eca95803404,
         type: 3}
@@ -3786,20 +3629,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5083575645973209860, guid: 8edec5daa55bb6141ae9047237f52afc,
-        type: 3}
-      propertyPath: defaultSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5083575645973209919, guid: 8edec5daa55bb6141ae9047237f52afc,
         type: 3}
       propertyPath: m_Name
       value: Enemy Parent 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5083575645973209919, guid: 8edec5daa55bb6141ae9047237f52afc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8edec5daa55bb6141ae9047237f52afc, type: 3}
@@ -4184,17 +4017,17 @@ PrefabInstance:
     - target: {fileID: 8869058932815180347, guid: 555be0636294a294088fd34c358b3dcf,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8869058932815180347, guid: 555be0636294a294088fd34c358b3dcf,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8869058932815180347, guid: 555be0636294a294088fd34c358b3dcf,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8869058932965230073, guid: 555be0636294a294088fd34c358b3dcf,
         type: 3}

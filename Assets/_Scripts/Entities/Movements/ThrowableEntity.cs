@@ -34,6 +34,7 @@ public class ThrowableEntity : Entity
     public void RestartInteraction()
     {
         gameObject.layer = 9;
+        transform.parent = managerGO.transform;
 
         StickyInteraction sticky = GetComponent<StickyInteraction>();
         sticky.hasInteracted = false;
@@ -41,6 +42,5 @@ public class ThrowableEntity : Entity
         interacted = false;
         ToggleKinematic(false);
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        transform.parent = managerGO.transform;
     }
 }

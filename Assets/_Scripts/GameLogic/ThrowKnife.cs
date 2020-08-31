@@ -59,9 +59,6 @@ public class ThrowKnife : MonoBehaviour
     {
         knifesLeft--;
         knifesLeft = Mathf.Clamp(knifesLeft, 0, knifesStorage.Length);
-        Debug.Log("KnivesLeft " + knifesLeft);
-        Debug.Log("IndexKnife " + indexKnife);
-
 
         if (indexKnife < knifesStorage.Length - 1)
             indexKnife++;

@@ -14,9 +14,6 @@ public class UIManager : MonoBehaviour
 
     public Text textMaxScore;
     public Text textMaxStage;
-    public Text textCurrentLife;
-    public Text textKnifesIndex;
-
 
 
     void Start()
@@ -36,12 +33,6 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameStatus.gameActive)
-        {
-            textCurrentLife.text = stageController.stages[stageController.currentStage].target.countHitInteraction.amountOfHits.ToString();
-            textKnifesIndex.text = throwKnife.indexKnife.ToString();
-        }
-
     }
     public void UpdateUI()
     {

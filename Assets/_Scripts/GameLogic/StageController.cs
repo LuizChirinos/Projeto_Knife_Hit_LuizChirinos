@@ -20,16 +20,21 @@ public class StageController : MonoBehaviour
 
     public void IncrementStage()
     {
+        if (currentStage >= stages.Length-1)
+        {
+            SceneManager.LoadScene("Win");
+            return;
+        }
+
         currentStage++;
         onStageCompleted();
         stages[currentStage].target.gameObject.SetActive(true);
 
-        if (currentStage >= stages.Length)
-        {
-            SceneManager.LoadScene("Win");
-        }
-
         if (currentStage > maxStage)
             maxStage = currentStage;
+    }
+    public void DelayedIncrementStage(float delay)
+    {
+        Invoke("IncrementStage", delay);
     }
 }

@@ -29,13 +29,12 @@ public class GameStart : MonoBehaviour
     public void StartGame()
     {
         throwKnife.RestartKnifesThrow();
-        //throwKnife.SetKnifePosition(0, throwKnife.knifeStartPosition.position);
 
         for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
         {
             throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
         }
-
+        
         stageController.ReleaseFirstStage();
         ScoreController.SetScore(0);
 
@@ -45,17 +44,23 @@ public class GameStart : MonoBehaviour
 
     public void RestartGame()
     {
-        throwKnife.RestartKnifesThrow();
         for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
         {
             throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
         }
-
+        
+        throwKnife.RestartKnifesThrow();
+        Debug.Log("Restart");
         uimanager.UpdateUI();
     }
     public void ReturnMenu()
     {
         enemies = enemiesParent.GetComponentsInChildren<TargetEnemy>();
+
+        for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
+        {
+            throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
+        }
 
         foreach (TargetEnemy enemy in enemies)
         {
@@ -65,11 +70,6 @@ public class GameStart : MonoBehaviour
         throwKnife.RestartKnifesThrow();
 
         GameStatus.ToggleGameActivation(false);
-
-        for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
-        {
-            throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
-        }
 
         uimanager.UpdateUI();
     }

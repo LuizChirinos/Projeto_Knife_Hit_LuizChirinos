@@ -6,7 +6,7 @@ using UnityEngine;
 public class TargetEnemy : MonoBehaviour
 {
     public CountHitsInteraction countHitInteraction;
-    private ThrowKnife throwKnife;
+    public ThrowKnife throwKnife;
     private GameObject managerGO;
     private StageController stageController;
 
@@ -23,9 +23,7 @@ public class TargetEnemy : MonoBehaviour
     {
         if (countHitInteraction.amountOfHits >= throwKnife.knifesStorage.Length-1)
         {
-            stageController.IncrementStage();
-            //Debug.Log("Current Stage " + stageController.currentStage);
-            //Mudar implementação de Die()
+            stageController.DelayedIncrementStage(1f);
             Die();
         }
     }
@@ -35,4 +33,5 @@ public class TargetEnemy : MonoBehaviour
         countHitInteraction.RestartHits();
         gameObject.SetActive(false);
     }
+
 }
