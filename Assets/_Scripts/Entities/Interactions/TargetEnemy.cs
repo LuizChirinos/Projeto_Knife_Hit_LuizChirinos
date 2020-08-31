@@ -5,15 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(CountHitsInteraction))]
 public class TargetEnemy : MonoBehaviour
 {
-    public CountHitsInteraction pointGiverInteraction;
+    public CountHitsInteraction countHitInteraction;
     private ThrowKnife throwKnife;
     private GameObject managerGO;
     private StageController stageController;
 
     private void Start()
     {
-        pointGiverInteraction = GetComponent<CountHitsInteraction>();
-        pointGiverInteraction.interactionEvent += CheckHits;
+        countHitInteraction = GetComponent<CountHitsInteraction>();
+        countHitInteraction.interactionEvent += CheckHits;
         managerGO = GameObject.Find("Manager");
         throwKnife = managerGO.GetComponent<ThrowKnife>();
         stageController = managerGO.GetComponent<StageController>();
@@ -21,10 +21,10 @@ public class TargetEnemy : MonoBehaviour
 
     public void CheckHits(Collider2D col)
     {
-        if (pointGiverInteraction.amountOfHits >= throwKnife.knifesStorage.Length-1)
+        if (countHitInteraction.amountOfHits >= throwKnife.knifesStorage.Length-1)
         {
             stageController.IncrementStage();
-            Debug.Log("Current Stage " + stageController.currentStage);
+            //Debug.Log("Current Stage " + stageController.currentStage);
             //Mudar implementação de Die()
             Die();
         }
@@ -32,7 +32,7 @@ public class TargetEnemy : MonoBehaviour
 
     public virtual void Die()
     {
-        pointGiverInteraction.RestartHits();
+        countHitInteraction.RestartHits();
         gameObject.SetActive(false);
     }
 }

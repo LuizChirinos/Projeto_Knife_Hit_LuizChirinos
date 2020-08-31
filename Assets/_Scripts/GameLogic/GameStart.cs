@@ -23,7 +23,6 @@ public class GameStart : MonoBehaviour
         enemies = enemiesParent.GetComponentsInChildren<TargetEnemy>();
 
         stageController.onStageCompleted += RestartGame;
-        stageController.onStageCompleted += throwKnife.RestartKnifesThrow;
         GameStatus.ToggleGameActivation(false);
 
     }
@@ -54,14 +53,14 @@ public class GameStart : MonoBehaviour
 
         foreach (TargetEnemy enemy in enemies)
         {
+            enemy.countHitInteraction.RestartHits();
             enemy.gameObject.SetActive(false);
         }
-        throwKnife.SetKnifePosition(0, throwKnife.knifeMenuPosition.position);
         throwKnife.RestartKnifesThrow();
 
         GameStatus.ToggleGameActivation(false);
 
-        for (int i = 1; i < throwKnife.knifesStorage.Length; i++)
+        for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
         {
             throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
         }

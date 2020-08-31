@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour
 
     public Text textMaxScore;
     public Text textMaxStage;
+    public Text textCurrentLife;
+    public Text textKnifesIndex;
+
 
 
     void Start()
@@ -29,17 +32,27 @@ public class UIManager : MonoBehaviour
 
         knifesBar.maxValue = throwKnife.knifesStorage.Length;
         UpdateUI();
-    } 
+    }
+
+    private void Update()
+    {
+        if (GameStatus.gameActive)
+        {
+            textCurrentLife.text = stageController.stages[stageController.currentStage].target.countHitInteraction.amountOfHits.ToString();
+            textKnifesIndex.text = throwKnife.indexKnife.ToString();
+        }
+
+    }
     public void UpdateUI()
     {
         int knifeLeft = throwKnife.GetKnifesLeft();
         knifesBar.value = knifeLeft;
 
         textScore.text = "Score\n" + ScoreController.score.ToString();
-        textStage.text = "Stage\n" + stageController.currentStage.ToString();
+        textStage.text = "Stage\n" + (stageController.currentStage+1).ToString();
         textMoney.text = MoneyController.money.ToString();
 
         textMaxScore.text = "MaxScore\n" + ScoreController.maxScore.ToString();
-        textMaxStage.text = "Stage\n" + StageController.maxStage.ToString();
+        textMaxStage.text = "Stage\n" + (StageController.maxStage+1).ToString();
     }
 }
