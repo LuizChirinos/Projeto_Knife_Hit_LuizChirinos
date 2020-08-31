@@ -11,7 +11,7 @@ public class GameStart : MonoBehaviour
     private StageController stageController;
 
     private GameObject enemiesParent;
-    private Entity[] enemies;
+    private TargetEnemy[] enemies;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class GameStart : MonoBehaviour
         throwKnife = managerGO.GetComponent<ThrowKnife>();
         stageController = managerGO.GetComponent<StageController>();
         uimanager = managerGO.GetComponent<UIManager>();
-        enemies = enemiesParent.GetComponentsInChildren<Entity>();
+        enemies = enemiesParent.GetComponentsInChildren<TargetEnemy>();
 
         stageController.onStageCompleted += RestartGame;
         stageController.onStageCompleted += throwKnife.RestartKnifesThrow;
@@ -29,6 +29,7 @@ public class GameStart : MonoBehaviour
     }
     public void StartGame()
     {
+        throwKnife.RestartKnifesThrow();
         throwKnife.SetKnifePosition(0, throwKnife.knifeStartPosition.position);
         stageController.ReleaseFirstStage();
         ScoreController.SetScore(0);
@@ -39,19 +40,33 @@ public class GameStart : MonoBehaviour
 
     public void RestartGame()
     {
+        throwKnife.RestartKnifesThrow();
         for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
         {
             throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
         }
+
+        uimanager.UpdateUI();
     }
     public void ReturnMenu()
     {
+        enemies = enemiesParent.GetComponentsInChildren<TargetEnemy>();
+
+        foreach (TargetEnemy enemy in enemies)
+        {
+            enemy.gameObject.SetActive(false);
+        }
         throwKnife.SetKnifePosition(0, throwKnife.knifeMenuPosition.position);
+        throwKnife.RestartKnifesThrow();
+
+        GameStatus.ToggleGameActivation(false);
 
         for (int i = 1; i < throwKnife.knifesStorage.Length; i++)
         {
             throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
         }
+
+        uimanager.UpdateUI();
     }
 
     public void ReleaseGameStatus()

@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ThrowKnife : MonoBehaviour
 {
@@ -15,16 +17,22 @@ public class ThrowKnife : MonoBehaviour
 
     public delegate void OnThrowKnife();
     public OnThrowKnife onThrow = delegate { };
-    
+
     [SerializeField]
     private bool hasInteracted = false;
     private int knifesLeft;
+
+    private EventSystem eventSystem;
+    private GameObject objectSelected;
+    private Button buttonSelected;
+
 
     private void Start()
     {
         onThrow += IncrementKnife;
         knifesStorage = GetComponentsInChildren<ThrowableEntity>();
         knifesLeft = knifesStorage.Length;
+        eventSystem = EventSystem.current;
 
         for (int i = 1; i < knifesStorage.Length; i++)
         {
@@ -33,18 +41,15 @@ public class ThrowKnife : MonoBehaviour
         currentKnife = knifesStorage[indexKnife];
     }
 
-    void Update()
+    public void Throw()
     {
         if (GameStatus.gameActive)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (indexKnife < knifesStorage.Length)
             {
-                if (indexKnife < knifesStorage.Length)
-                {
-                    hasInteracted = true;
-                    currentKnife.Move();
-                    onThrow();
-                }
+                hasInteracted = true;
+                currentKnife.Move();
+                onThrow();
             }
         }
     }
@@ -54,7 +59,7 @@ public class ThrowKnife : MonoBehaviour
         knifesLeft--;
         knifesLeft = Mathf.Clamp(knifesLeft, 0, knifesStorage.Length);
 
-        if (indexKnife < knifesStorage.Length-1)
+        if (indexKnife < knifesStorage.Length - 1)
             indexKnife++;
         else
             Debug.Log(gameObject.name + " out of knifes");

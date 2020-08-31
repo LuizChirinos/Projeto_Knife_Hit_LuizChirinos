@@ -33,4 +33,8 @@ public class CountHitsInteraction : InteractionBehaviour
         if (deactivateOnInteraction)
             gameObject.SetActive(false);
     }
+    public void RestartHits()
+    {
+        amountOfHits = 0;
+    }
 }

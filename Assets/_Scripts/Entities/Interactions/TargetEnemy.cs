@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CountHitsInteraction))]
 public class TargetEnemy : MonoBehaviour
 {
-    private CountHitsInteraction pointGiverInteraction;
+    public CountHitsInteraction pointGiverInteraction;
     private ThrowKnife throwKnife;
     private GameObject managerGO;
     private StageController stageController;
@@ -32,6 +32,7 @@ public class TargetEnemy : MonoBehaviour
 
     public virtual void Die()
     {
+        pointGiverInteraction.RestartHits();
         gameObject.SetActive(false);
     }
 }
