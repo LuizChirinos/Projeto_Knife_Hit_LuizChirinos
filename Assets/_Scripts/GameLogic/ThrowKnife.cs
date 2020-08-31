@@ -79,8 +79,8 @@ public class ThrowKnife : MonoBehaviour
 
     public void SetKnifePosition(int index, Vector3 position)
     {
-        knifesStorage[index].transform.position = position;
         knifesStorage[index].RestartInteraction();
+        knifesStorage[index].transform.position = position;
     }
     public void RestartKnifesThrow()
     {

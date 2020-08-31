@@ -29,7 +29,13 @@ public class GameStart : MonoBehaviour
     public void StartGame()
     {
         throwKnife.RestartKnifesThrow();
-        throwKnife.SetKnifePosition(0, throwKnife.knifeStartPosition.position);
+        //throwKnife.SetKnifePosition(0, throwKnife.knifeStartPosition.position);
+
+        for (int i = 0; i < throwKnife.knifesStorage.Length; i++)
+        {
+            throwKnife.SetKnifePosition(i, throwKnife.knifeStartPosition.position);
+        }
+
         stageController.ReleaseFirstStage();
         ScoreController.SetScore(0);
 
